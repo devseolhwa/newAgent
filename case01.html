@@ -699,7 +699,6 @@
 
                 const raf = (time) => {
 					lenis.raf(time);
-					ScrollTrigger.update(); // 덜컹거림 최소화
 					requestAnimationFrame(raf);
 				};
 				requestAnimationFrame(raf);
@@ -714,14 +713,9 @@
 			let resizeTimer;
 			window.addEventListener("resize", () => {
 				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(() => {
-					if ($youTubeSlider.length) initSliders();
-					setTimeout(() => {
-						requestAnimationFrame(() => {
-							ScrollTrigger.refresh();
-						});
-					}, 50);
-				}, 200);
+				window.addEventListener("orientationchange", () => {
+					setTimeout(() => ScrollTrigger.refresh(), 300);
+				});
 			});
 
             setTimeout(() => {
@@ -1035,7 +1029,7 @@
 					trigger: ".section01",
 					start: "top 30%",
 					end: "bottom 30%",
-					scrub: 1,
+					scrub: 0.2,
 					pinSpacing: true,
 					//markers:true,
 					onEnter: () => actionStart(".move1"),
@@ -1052,7 +1046,7 @@
 					trigger: ".section02New",
 					start: "top 30%",
 					end: "bottom 30%",
-					scrub: 1,
+					scrub: 0.2,
 					pinSpacing: true,
 					//markers:true,
 					onEnter: () => actionStart(".move2"),
@@ -1070,7 +1064,7 @@
 					start: "top 30%",
 					endTrigger: ".section04",
 					end: "bottom top",
-					scrub: 1,
+					scrub: 0.2,
 					pinSpacing: true,
 					//markers:true,
 					onEnter: () => actionStart(".move3"),
