@@ -439,7 +439,7 @@ border: 1px solid rgba(255, 255, 255, 0.40);box-sizing: border-box; overflow: hi
 	.section02New .search_wrap .btn img {width:4.375vw; height:4.375vw;}
 
 	.section03New{height: 56.25vw;height: 60.1042vw;}
-	.section03New .bgMin:before,.section03New .bgMin:after { width:21.30208333vw; height:53.125vw;background-size:cover;}
+	.section03New .bgMin:before,.section03New .bgMin:after {/*  width:21.30208333vw; height:53.125vw;background-size:cover; */}
 
 	.youTubeWrap{/* height: 56.25vw; */ padding-top:8.072916666vw;}
 	.youTubeWrap h2{font-size: 4.6875vw;}
