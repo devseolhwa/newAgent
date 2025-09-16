@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신규요원이벤트</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://lolstatic-a.akamaihd.net/webfonts/live/css/valorant/fonts.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/popup.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="assets/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="assets/js/lenis.js"></script>
+	<script src="assets/js/lib/gsap.min.js"></script>
+    <script src="assets/js/lib/ScrollTrigger.min.js"></script>
+	<script src="assets/js/slick.js"></script>
+	<script defer="defer" src="https://cdn.rgpub.io/public/live/riotbar/latest/kr-valorant-evergreen.ko_KR.js"></script><!-- 라이엇바 상하단 js -->
+</head>
+<body>
+
+    <!-- 라이엇바 상단 -->
+    <header id="riotbar-header"></header>
+    <header id="top-menu"></header>
+
+    <div class="wrap">
+
+        <div class="popupSample">
+            <!--
+                [전달사항] modalOpen(id) 열기 / modalClose(id) 닫기 / modalNext(닫을 id, 열 id) 닫고 열기
+            -->
+            <a href="#none" onclick="modalOpen('#modal-mypage1');">나의 보상 내역 확인하기 > 획득/당첨 내역 없음</a>
+			<a href="#none" onclick="modalOpen('#modal-mypage2');">나의 보상 내역 확인하기 > 획득/당첨 내역 있음</a>
+			<a href="#none" onclick="modalOpen('#modal-loading');">로딩</a>
+            <a href="#none" onclick="modalOpen('#modal-ex01');">교환</a>
+
+            <a href="#none" onclick="modalOpen('#modal-ex02');">레디어나이트 포인트 획득</a>
+
+            <a href="#none" onclick="modalOpen('#modal-ex03');">실물 경품 획득</a>
+            <a href="#none" onclick="modalOpen('#modal-ex04');">경품 이미지 슬라이드(중간)</a>
+			<a href="#none" onclick="modalOpen('#modal-ex05');">인게임 아이템 획득</a>
+			<a href="#none" onclick="modalOpen('#modal-ex06');">인게임 아이템 획득_기보유</a>
+
+            <a href="#none" onclick="modalOpen('#modal-ex07');">특별 굿즈 상세 보기</a>
+
+            <a href="#none" onclick="modalOpen('#modal-ex08');">중복 보상 방지</a>
+            <a href="#none" onclick="modalOpen('#modal-ex09');">보상받기 도중 재고 나가는 case</a>
+            <a href="#none" onclick="modalOpen('#modal-ex10');">보상 교환 기간 종료 후 MDMS 입력 기간</a>
+			<a href="#none" onclick="modalOpen('#modal-ex11');">콘테스트 기간 종료 후</a>
+        </div>
+
+		<!-- 나의 보상 내역 확인하기 > 획득/당첨 내역 없음 START -->
+        <section class="modalPopup" id="modal-mypage1" data-lenis-prevent>
+			<div class="modalCenter modalMypage">
+                <div class="modalInner">
+					<div class="modalBody">
+						<div class="title_wrap">
+							<h4 class="textXl">나의 획득 내역</h4>
+						</div>
+						<div class="scroll_wrap">
+							<p class="emptyTxt">획득 내역이 없습니다</p>
+						</div>
+					</div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-mypage1');">닫기</button>
+				</div>
+			</div>
+		</section>
+		<!-- 나의 보상 내역 확인하기 > 획득/당첨 내역 없음 END -->
+
+		<!-- 나의 보상 내역 확인하기 > 획득/당첨 내역 있음 START -->
+        <section class="modalPopup" id="modal-mypage2" data-lenis-prevent>
+			<div class="modalCenter modalMypage">
+                <div class="modalInner">
+					<div class="modalBody">
+						<div class="title_wrap">
+							<h4 class="textXl">나의 획득 내역</h4>
+						</div>
+						<div class="scroll_wrap">
+							<div class="history_wrap">
+								<div class="prizeHistory">
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item01.png" alt="바나나맛우유"></div>
+										<p class="name">바나나맛우유</p>
+										<button type="button" class="btnDelivery">배송지 입력</button>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item02.png" alt="레디어나이트 포인트 20개"></div>
+										<p class="name">레디어나이트 포인트 20개</p>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item03.png" alt="픽셀 모멘트: 펄 카드"></div>
+										<p class="name">픽셀 모멘트: 펄 카드</p>
+										<span class="getItemBtn">기보유 아이템</span>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item01.png" alt="바나나맛우유"></div>
+										<p class="name">바나나맛우유</p>
+										<button type="button" class="btnDelivery">배송지 입력</button>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item02.png" alt="레디어나이트 포인트 20개"></div>
+										<p class="name">레디어나이트 포인트 20개</p>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item03.png" alt="픽셀 모멘트: 펄 카드"></div>
+										<p class="name">픽셀 모멘트: 펄 카드</p>
+										<span class="getItemBtn">기보유 아이템</span>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item01.png" alt="바나나맛우유"></div>
+										<p class="name">바나나맛우유</p>
+										<button type="button" class="btnDelivery">배송지 입력</button>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item02.png" alt="레디어나이트 포인트 20개"></div>
+										<p class="name">레디어나이트 포인트 20개</p>
+									</div>
+									<div class="item">
+										<p class="date">2025. 3. 20</p>
+										<div class="img"><img src="assets/images/img_history_item03.png" alt="픽셀 모멘트: 펄 카드"></div>
+										<p class="name">픽셀 모멘트: 펄 카드</p>
+										<span class="getItemBtn">기보유 아이템</span>
+									</div>
+								</div><!-- prizeHistory END -->
+							</div>
+						</div>
+					</div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-mypage2');">닫기</button>
+				</div>
+			</div>
+		</section>
+		<!-- 나의 보상 내역 확인하기 > 획득/당첨 내역 있음 END -->
+
+        <!-- 로딩 START -->
+        <section class="modalPopup" id="modal-loading" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner loadingInner">
+                    <div class="loading"><p>로딩 중</p></div>
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">
+                                보유 포인트와 응모권이 부족합니다.<br />
+                                플레이하고 보상에 도전해 보세요!
+                            </p>
+                        </div>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-loading');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-loading');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 로딩 END -->
+
+        <!-- 교환 START -->
+        <section class="modalPopup" id="modal-ex01" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">
+                                교환하시겠습니까?
+                            </p>
+                        </div>
+                        <div class="btnGroup reverse">
+							<button type="button" class="btnItem black" onclick="modalClose('#modal-ex01');">교환하기</button>
+							<button type="button" class="btnItem line" onclick="modalClose('#modal-ex01');">닫기</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex01');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 교환 END -->
+
+        <!-- 레디어나이트 포인트 획득 START -->
+        <section class="modalPopup" id="modal-ex02" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <h4 class="textXl">축하합니다!</h4>
+                        <strong class="textLg">레디어나이트 포인트 10개</strong>
+                        <div class="imgItme">
+                            <img src="assets/images/img_ex_point.png" alt="레디어나이트 포인트 10개">
+                        </div>
+                        <p class="textXs">※ 스킨의 모션, 이펙트, 음향, 크로마 등을 업그레이드할 수 있는 레디어나이트 포인트입니다.</p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex02');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex02');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 레디어나이트 포인트 획득 END -->
+
+        <!-- 실물 경품 획득 START -->
+        <section class="modalPopup" id="modal-ex03" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <h4 class="textXl">축하합니다!</h4>
+                        <strong class="textLg">2023-LG-32GP850 32인치</strong>
+                        <div class="imgItme">
+                            <img src="assets/images/img_ex_item.png" alt="2023-LG-32GP850 32인치">
+                        </div>
+                        <p class="redText">당첨된 보상을 받으실 배송지 정보를 입력해 주세요</p>
+                        <p class="textXs">
+                            * 상품 설명 어쩌구 저쩌구<br />
+                            * 배송지 정보를 입력하지 않은 보상은 지급되지 않습니다. <br />
+                            * 0000년 00월 00일부터 순차적으로 배송 지급됩니다. <br />
+                            * 배송지 입력은 나의 보상 내역 확인에서도 입력하실 수 있습니다.
+                        </p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex03');">배송지 입력</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex03');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 실물 경품 획득 END -->
+
+        <!-- 경품 이미지 슬라이드(중간) START -->
+        <section class="modalPopup" id="modal-ex04" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <h4 class="textXl">축하합니다!</h4>
+                        <strong class="textLg">2023-LG-32GP850 32인치</strong>
+                        <div class="prizeSlider">
+                            <div class="slideItem"><img src="assets/images/img_ex_item.png" alt="2023-LG-32GP850 32인치"></div>
+                            <div class="slideItem"><img src="assets/images/img_ex_item.png" alt="2023-LG-32GP850 32인치"></div>
+                            <div class="slideItem"><img src="assets/images/img_ex_item.png" alt="2023-LG-32GP850 32인치"></div>
+                            <div class="slideItem"><img src="assets/images/img_ex_item.png" alt="2023-LG-32GP850 32인치"></div>
+                        </div>
+                        <p class="redText">당첨된 보상을 받으실 배송지 정보를 입력해 주세요</p>
+                        <p class="textXs">
+                            * 상품 설명 어쩌구 저쩌구<br />
+                            * 배송지 정보를 입력하지 않은 보상은 지급되지 않습니다. <br />
+                            * 0000년 00월 00일부터 순차적으로 배송 지급됩니다. <br />
+                            * 배송지 입력은 나의 보상 내역 확인에서도 입력하실 수 있습니다.
+                        </p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex04');">배송지 입력</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex04');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 경품 이미지 슬라이드(중간) END -->
+
+		<!-- 인게임 아이템 획득 START -->
+        <section class="modalPopup" id="modal-ex05" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <h4 class="textXl">축하합니다!</h4>
+                        <strong class="textLg">인게임 아이템 이름</strong>
+                        <div class="imgItme">
+                            <img src="assets/images/img_ex_item3.png" alt="인게임 아이템">
+                        </div>
+                        <p class="textXs">
+                            ※ 본 상품은 획득 즉시 게임 클라이언트의 컬렉션 항목에서 확인 및 장착 가능합니다.
+                        </p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex05');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex05');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 인게임 아이템 획득 END -->
+
+		<!-- 인게임 아이템 획득_기보유 START -->
+        <section class="modalPopup" id="modal-ex06" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <h4 class="textXl">축하합니다!</h4>
+                        <strong class="textLg">인게임 아이템 이름</strong>
+                        <div class="imgItme">
+                            <img src="assets/images/img_ex_item3.png" alt="인게임 아이템">
+                        </div>
+                        <p class="redText">이미 보유 중인 상품입니다.</p>
+                        <p class="textXs">
+                            ※ 본 상품은 획득 즉시 게임 클라이언트의 컬렉션 항목에서 확인 및 장착 가능합니다.
+                        </p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex06');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex06');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 인게임 아이템 획득_기보유 END -->
+
+        <!-- 특별 굿즈 상세 보기 START -->
+        <section class="modalPopup" id="modal-ex07" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <strong class="textLg">제트 한정판 바람막이</strong>
+                        <div class="prizeSlider">
+                            <div class="slideItem"><img src="assets/images/img_ex_item2.png" alt="제트 한정판 바람막이"></div>
+                            <div class="slideItem"><img src="assets/images/img_ex_item2.png" alt="제트 한정판 바람막이"></div>
+                            <div class="slideItem"><img src="assets/images/img_ex_item2.png" alt="제트 한정판 바람막이"></div>
+                        </div>
+                        <p class="textXs">
+                            * 상품 설명이 나옵니다.<br />
+                            * 상품 설명이 나옵니다.<br />
+                            * 상품 설명이 나옵니다.<br />
+                            * 상품 설명이 나옵니다.<br />
+                        </p>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex07');">닫기</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex07');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 특별 굿즈 상세 보기 END -->
+
+        <!-- 중복 보상 방지 START -->
+        <section class="modalPopup" id="modal-ex08" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">잘못된 접근입니다.</p>
+                        </div>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex08');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex08');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 중복 보상 방지 END -->
+
+        <!-- 보상받기 도중 재고 나가는 case START -->
+        <section class="modalPopup" id="modal-ex09" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">재고가 없습니다.</p>
+                        </div>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex09');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex09');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 보상받기 도중 재고 나가는 case END -->
+
+        <!-- 보상 교환 기간 종료 후 MDMS 입력 기간 START -->
+        <section class="modalPopup" id="modal-ex10" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">보상 기간이 아닙니다.</p>
+                        </div>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex10');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex10');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 보상 교환 기간 종료 후 MDMS 입력 기간 END -->
+
+		<!-- 콘테스트 기간 종료 후 START -->
+        <section class="modalPopup" id="modal-ex11" data-lenis-prevent>
+            <div class="modalCenter">
+                <div class="modalInner">
+                    <div class="modalBody">
+                        <div class="textGroup">
+                            <p class="textMd">영상 제출 기한이 종료되었습니다.</p>
+                        </div>
+                        <div class="btnGroup">
+                            <button type="button" class="btnItem black" onclick="modalClose('#modal-ex11');">확인</button>
+                        </div>
+                    </div><!-- modalBody END -->
+                    <button type="button" class="btnModalClose" onclick="modalClose('#modal-ex11');">닫기</button>
+                </div><!-- modalInner END -->
+            </div><!-- modalCenter END -->
+        </section>
+        <!-- 콘테스트 기간 종료 후 END -->
+
+    </div><!-- wrap END -->
+
+    <!-- 라이엇바 하단 -->
+    <footer id="riotbar-footer"></footer>
+    <script defer="defer" src="https://cdn.rgpub.io/public/live/riotbar/latest/kr-valorant-evergreen.ko_KR.js"></script><!-- 라이엇바 상하단 js -->
+
+
+    <script>
+
+	 	let lenis;
+
+        $(function () {
+            setTimeout(() => {
+                lenis = new Lenis();
+
+                const raf = (time) => {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                };
+
+                requestAnimationFrame(raf);
+            }, 700);
+            setTimeout(() => {
+                effectActive();
+
+                function effectActive(){
+                    $(".effectActive").each(function(){
+                        let $this = $(this);
+                        let start_pos = "top bottom";
+                        let end_pos = "bottom top";
+
+                        ScrollTrigger.create({
+                            trigger: $this,
+                            start: start_pos,
+                            end: end_pos,
+                            onEnter: function(){
+                                $this.addClass("active");
+                            },onLeave: function(){
+                                $this.removeClass("active");
+                            },onEnterBack: function(){
+                                $this.addClass("active");
+                            },onLeaveBack: function(){
+                                $this.removeClass("active");
+                            }
+                        });
+                    });
+                }
+
+                textActive();
+
+                function textActive(){
+                    $(".textActive").each(function(){
+                        let $this = $(this);
+                        let start_pos = "top bottom";
+                        let end_pos = "bottom top";
+
+                        ScrollTrigger.create({
+                            trigger: $this,
+                            start: start_pos,
+                            end: end_pos,
+                            onEnter: function(){
+                                $this.addClass("active");
+                            },onLeave: function(){
+                                $this.removeClass("active");
+                            },onEnterBack: function(){
+                                $this.addClass("active");
+                            },onLeaveBack: function(){
+                                $this.removeClass("active");
+                            }
+                        });
+                    });
+                }
+            }, 600);
+
+			setTimeout(function () {
+			 $(".sectionVisual").addClass("animation");
+			}, 1000);
+
+			// youTube Slider
+            const $youTubeSlider = $(".youTubeSlider");
+            const $sliderFor = $(".slider-for");
+            const $sliderNav = $(".slider-nav");
+
+            function initSliders() {
+                if ($sliderFor.hasClass('slick-initialized')) {
+                    $sliderFor.slick('unslick');
+                }
+                if ($sliderNav.hasClass('slick-initialized')) {
+                    $sliderNav.slick('unslick');
+                }
+
+                $sliderFor.on("init reInit", function (event, slick) {
+                    $(".youTubeSliderControl .total").text(slick.slideCount);
+                    $(".youTubeSliderControl .index").text((slick.currentSlide || 0) + 1);
+                });
+
+                $sliderFor.on("afterChange", function (event, slick, currentSlide) {
+                    $(".youTubeSliderControl .index").text(currentSlide + 1);
+                });
+
+                $sliderFor.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: true,
+                    infinite: true,
+                    //adaptiveHeight: true,
+                    prevArrow: $(".youTubeSliderControl .prev"),
+                    nextArrow: $(".youTubeSliderControl .next"),
+                    asNavFor: $sliderNav
+                });
+
+                $sliderNav.slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    vertical: true,
+                    //variableWidth: true,
+                    focusOnSelect: true,
+                    dots: false,
+                    arrows: false,
+                    infinite: true,
+                    asNavFor: $sliderFor,
+                    responsive: [
+                        {
+                            breakpoint: 769,
+                            settings: {
+                                vertical: false,
+                                variableWidth: true,
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
+                });
+            }
+
+            if ($youTubeSlider.length) {
+                initSliders();
+
+                let resizeTimer;
+                $(window).on("resize", function () {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(function () {
+                        initSliders();
+                    }, 200);
+                });
+            }
+
+		 });
+
+		 // 팝업열기
+        function modalOpen(obj) {
+            var $modal = $(obj);
+
+            $(".modalPopup.show").each(function () {
+                modalClose($(this));
+            });
+
+            $("body").addClass("scrollNo");
+            $modal.fadeIn("fast").addClass("show");
+			initSliderInModal($modal);
+
+            if (lenis) lenis.stop();
+
+            let $slider = $modal.find(".prizeSlider.slick-initialized");
+            if ($slider.length) {
+                $slider.each(function () {
+                    $(this).slick("setPosition");
+                    $(this).slick("slickGoTo", 0, true);
+                    $(this).slick("slickPlay");
+                });
+            }
+        }
+
+        // 팝업닫기
+        function modalClose(obj) {
+            var $modal = $(obj);
+
+            $("body").removeClass("scrollNo");
+            $modal.fadeOut("fast").removeClass("show");
+
+            if (lenis) lenis.start();
+
+        }
+
+		 // 팝업 내 슬라이드
+        function initSliderInModal(modal) {
+            let $slider = $(modal).find(".prizeSlider");
+            if ($slider.length && !$slider.hasClass("slick-initialized")) {
+                $slider.slick({
+                    slidesToShow : 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    speed: 800,
+                    infinite: true,
+                    swipeToSlide: true,
+                    draggable: true,
+                    arrows: true,
+                    dots: true,
+                    pauseOnHover: false,
+                    responsive:[{ breakpoint: 767, settings: { arrows: false } }]
+                });
+            }
+        }
+
+		$(document).ready(function () {
+			$(".sectionVisual .tabs li a").click(function() {
+
+                $(".sectionVisual .tabs li").removeClass("active");
+                $(this).parent("li").addClass("active");
+                $(".sectionVisual .tab_content").hide();
+                var activeTab = $(this).attr("href");
+                $(activeTab).fadeIn();
+                return false;
+            });
+
+			$('.section01_01 .listBox li.digitalCoupon .getBefore .giftBtn').hover(function(){
+				$(this).parent(".giftLine").addClass("hoverline");
+			 }, function() {
+				$(this).parent(".giftLine").removeClass("hoverline");
+			});
+			$('.section01_01 .listBox li.digitalCoupon .getAfter .giftBtn').hover(function(){
+				$(this).parent(".giftLine").addClass("hoverline");
+			 }, function() {
+				$(this).parent(".giftLine").removeClass("hoverline");
+			});
+			$('.section01_01 .listBox li.itemCoupon .getBefore .giftBtn').hover(function(){
+				$(this).parent(".giftLine").addClass("hoverline");
+			 }, function() {
+				$(this).parent(".giftLine").removeClass("hoverline");
+			});
+			$('.section01_02 .missionBox li.pointGoods .getBefore .giftBtn').hover(function(){
+				$(this).parent(".giftLine").addClass("hoverline");
+			 }, function() {
+				$(this).parent(".giftLine").removeClass("hoverline");
+			});
+
+			$('.section02New .colorBox .btn').hover(function(){
+
+				$('.section02New .colorBox').removeClass("hoverEffect");
+				$(this).parents(".colorBox").addClass("hoverEffect");
+			 }, function() {
+				$('.section02New .colorBox').removeClass("hoverEffect");
+			});
+		});
+
+
+        // 자주 묻는 질문
+        document.querySelectorAll(".section04 .question").forEach(function (question) {
+            question.addEventListener("click", function () {
+                let clickedLi = question.closest("li");
+                document.querySelectorAll(".section04 ul li").forEach(function (li) {
+                    if (li === clickedLi) {
+                        if (li.classList.contains("active")) {
+                            li.classList.remove("active");
+                        } else {
+                            li.classList.add("active");
+                        }
+                    } else {
+                        li.classList.remove("active");
+                    }
+                });
+            });
+        });
+
+
+        // 하루 한 판 출석체크 섹션으로 이동
+        function moveToOne() {
+			requestAnimationFrame(() => {
+				const targetElement = document.querySelector("[data-section='section1']");
+				if (targetElement) {
+					const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 68;
+
+					if (typeof lenis !== "undefined") {
+						lenis.scrollTo(targetElement, {
+							duration: 1.2,
+							offset: -68,
+						});
+					} else {
+						window.scrollTo({
+							top: targetTop,
+							behavior: "smooth",
+						});
+					}
+				}
+			});
+		}
+
+		// 클립 콘테스트 섹션으로 이동
+		function moveToTwo() {
+			requestAnimationFrame(() => {
+				const targetElement = document.querySelector("[data-section='section2']");
+				if (targetElement) {
+					const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 68;
+
+					if (typeof lenis !== "undefined") {
+						lenis.scrollTo(targetElement, {
+							duration: 1.2,
+							offset: -68,
+						});
+					} else {
+						window.scrollTo({
+							top: targetTop,
+							behavior: "smooth",
+						});
+					}
+				}
+			});
+		}
+
+		// 발로란트 신규 소식 섹션으로 이동
+		function moveToThree() {
+			requestAnimationFrame(() => {
+				const targetElement = document.querySelector("[data-section='section3']");
+				if (targetElement) {
+					const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 68;
+
+					if (typeof lenis !== "undefined") {
+						lenis.scrollTo(targetElement, {
+							duration: 1.2,
+							offset: -68,
+						});
+					} else {
+						window.scrollTo({
+							top: targetTop,
+							behavior: "smooth",
+						});
+					}
+				}
+			});
+		}
+
+
+
+
+
+        // ios 사파리 height
+        const setVh = () => {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
+        };
+        window.addEventListener('resize', setVh);
+        setVh();
+
+    </script>
+</body>
+</html>
