@@ -229,6 +229,7 @@ width:1100px; height:1068px; background:url(../images/Agent_Veto.png)no-repeat c
 .section02New .colorBox .btn img {margin-left:2px;margin-top:-2px; width:16px; height:16px;}
 .section02New .img_wrap {width:1281px; height:1280px; position:absolute; bottom:0;left:50%; transform:translateX(-50%); background:url(../images/section02New_rightImgBig.png)no-repeat center; margin-left:640px;}
 .section02New .colorBox .img {width:240px; height:207px;}
+.section02New .colorBox .img img{width: 100%;height: 100%;}
 .section02New .search_wrap {width:560px; position:relative;}
 .section02New .search_wrap .btn {position:absolute; top:0px; right:0;}
 .section02New .search_wrap .btn img {width:84px; height:84px;}
@@ -247,7 +248,7 @@ width:1100px; height:1068px; background:url(../images/Agent_Veto.png)no-repeat c
 .youTubeSlider .slider-for .slideItem .img{padding: 0 30px;box-sizing: border-box;}
 .youTubeSlider .slider-for .slideItem .img a{position: relative;width: 977px;height: 550px; display: block;overflow: hidden;border-radius: 15px;background: #00111C;box-sizing: border-box;box-shadow: 0 6.111px 15.278px 0 rgba(0, 0, 0, 0.30);}
 .youTubeSlider .slider-for .slideItem .img a:before{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.60);-webkit-transition: .3s;transition: .3s;pointer-events: none;}
-.youTubeSlider .slider-for .slick-current .img a:before{background: rgba(0, 0, 0, 0);pointer-events: inherit;}
+.youTubeSlider .slider-for .slick-center .img a:before{background: rgba(0, 0, 0, 0);pointer-events: inherit;}
 .youTubeSlider .slider-for .slideItem .img img {width:100%; height:100%; margin:0 auto;}
 .youTubeSlider .slider-for .slideItem .img iframe {width:100%; height:100%;}
 .youTubeSlider .sliderNavWrap{position: relative;width: 220px; margin-left:40px; margin-right:36px;}
@@ -646,7 +647,7 @@ border: 1px solid rgba(255, 255, 255, 0.40);box-sizing: border-box; overflow: hi
 	.section02New .search_wrap .btn img {width:15.55555vw; height:15.55555vw;}
 	.section02New .card_wrap {width:100%;}
 	.section02New .card_wrap ul {padding:0 2.77777vw 12.5vw;}
-	.section02New .card_wrap li {width:100%;border-top:1px solid #00172B4D;position:relative; height:53.88888vw;}
+	.section02New .card_wrap li {width:100%;border-top:1px solid #00172B4D;position:relative; height:53.8889vw;}
 	.section02New .card_wrap li:last-child {border-bottom:1px solid #00172B4D}
 
 	.section02New .card_wrap li .colorBox {width:100%; height:100%;}
@@ -656,7 +657,7 @@ border: 1px solid rgba(255, 255, 255, 0.40);box-sizing: border-box; overflow: hi
 	.section02New .card_wrap li .color4 {background: linear-gradient(50.06deg, rgba(228, 226, 255, 0) 27.34%, rgba(228, 226, 255, 0.8) 94.2%);}
 
 	.section02New .colorBox .flex-box {display:block; height:100%;}
-	.section02New .colorBox .img {width:62.22222vw; height:53.88888vw; position:absolute; top:0; right:0; text-align:right;}
+	.section02New .colorBox .img {width:62.22222vw; height:53.88888vw;width: 51.3889vw;height: 53.8889vw; position:absolute; top:0; right:0; text-align:right;}
 	.section02New .colorBox .txt {margin:0; padding:5.5555vw 0 0 5.5555vw;}
 	.section02New .colorBox .txt h4 {font-weight: 400;font-size: 8.88888vw;line-height: 100%;letter-spacing: -0.04em;}
 	.section02New .colorBox .txt p {font-weight: 500;font-size: 3.88888vw;line-height: 140%;letter-spacing: 0;}
@@ -711,10 +712,7 @@ border: 1px solid rgba(255, 255, 255, 0.40);box-sizing: border-box; overflow: hi
 	.errorPage .txt_wrap {padding-top:60.5555vw;}
 	.errorPage .txt_wrap h4 {margin-top:7.77777vw;}
 
-	/* .youTubeSlider .slider-for .slideItem .img {position: relative;display: flex;justify-content: center;align-items: center;height: auto;}
-	.youTubeSlider .slider-for .slideItem.normal .img iframe {width: 100%;aspect-ratio: 16 / 9;}
-	.youTubeSlider .slider-for .slideItem.shorts .img iframe {max-width: 360px;width: 100%;aspect-ratio: 9 / 16;} */
-
-
+	.textActive{-webkit-transform: translateY(0);transform: translateY(0);}
+	.effectActive {opacity:1;transition: all 0.4s 0.3s;-webkit-transition: all 0.4s 0.3s;}
 
 }
