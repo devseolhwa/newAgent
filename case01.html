@@ -904,15 +904,22 @@
         }
 
 		$(document).ready(function () {
-			$(".sectionVisual .tabs li a").click(function() {
+			$(".sectionVisual .tabs li a").click(function () {
 
-                $(".sectionVisual .tabs li").removeClass("active");
-                $(this).parent("li").addClass("active");
-                $(".sectionVisual .tab_content").hide();
-                var activeTab = $(this).attr("href");
-                $(activeTab).fadeIn();
-                return false;
-            });
+				$(".sectionVisual .tabs li").removeClass("active");
+				$(this).parent("li").addClass("active");
+				$(".sectionVisual .tab_content").hide();
+
+				var activeTab = $(this).attr("href");
+				$(activeTab).fadeIn();
+
+				var $video = $(activeTab).find("video.videoTab").get(0);
+				if ($video) {
+					$video.currentTime = 0;
+					$video.play();
+				}
+				return false;
+			});
 
 			$('.section01_01 .listBox li.digitalCoupon .getBefore .giftBtn').hover(function(){
 				$(this).parent(".giftLine").addClass("hoverline");
