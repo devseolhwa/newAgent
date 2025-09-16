@@ -424,12 +424,26 @@
                 lenis = new Lenis();
 
                 const raf = (time) => {
-                    lenis.raf(time);
-                    requestAnimationFrame(raf);
-                };
-
-                requestAnimationFrame(raf);
+					lenis.raf(time);
+					requestAnimationFrame(raf);
+				};
+				requestAnimationFrame(raf);
             }, 700);
+			initGSAP01();
+			initGSAP02();
+			initGSAP03();
+			window.addEventListener('load', () => {
+				ScrollTrigger.refresh();
+			});
+
+			let resizeTimer;
+			window.addEventListener("resize", () => {
+				clearTimeout(resizeTimer);
+				window.addEventListener("orientationchange", () => {
+					setTimeout(() => ScrollTrigger.refresh(), 300);
+				});
+			});
+
             setTimeout(() => {
                 effectActive();
 
@@ -546,13 +560,13 @@
             if ($youTubeSlider.length) {
                 initSliders();
 
-                let resizeTimer;
+                /* let resizeTimer;
                 $(window).on("resize", function () {
                     clearTimeout(resizeTimer);
                     resizeTimer = setTimeout(function () {
                         initSliders();
                     }, 200);
-                });
+                }); */
             }
 
 		 });
