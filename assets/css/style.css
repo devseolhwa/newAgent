@@ -47,6 +47,18 @@ width:1100px; height:1068px; background:url(../images/Agent_Veto.png)no-repeat c
 .sectionVisual .skills_wrap {width:500px; margin-top:484.06px;}
 .sectionVisual .tab_content {display:none;}
 
+.sectionVisual .tabs li.active a[href] {}
+.sectionVisual .tabs li.active a[href="#tab1"] ~ #tab1,
+.sectionVisual .tabs li.active a[href="#tab2"] ~ #tab2,
+.sectionVisual .tabs li.active a[href="#tab3"] ~ #tab3,
+.sectionVisual .tabs li.active a[href="#tab4"] ~ #tab4,
+.sectionVisual .tabs li.active a[href="#tab5"] ~ #tab5,
+.sectionVisual .tabs li.active a[href="#tab6"] ~ #tab6,
+.sectionVisual .tabs li.active a[href="#tab7"] ~ #tab7,
+.sectionVisual .tabs li.active a[href="#tab8"] ~ #tab8 {
+  display: block;
+}
+
 .sectionVisual .skills_wrap .tabs ul {display:flex; justify-content:flex-end; }
 .sectionVisual .skills_wrap .tabs li {margin-left:8px;}
 .sectionVisual .skills_wrap .tabs li a {width:62px; height:62px;display:block; text-indent:-99999px; background-repeat:no-repeat; background-position:center;overflow:hidden; border-radius:50%;}
@@ -62,7 +74,7 @@ width:1100px; height:1068px; background:url(../images/Agent_Veto.png)no-repeat c
 .sectionVisual .skills_wrap .tabs li.active .icon4 {background-image:url(../images/sectionVisual_ic4_active.png);}
 
 .sectionVisual .skills_wrap .txt h3 {font-family: var(--font02);font-weight: 400;font-size: 50px;line-height: 100%;letter-spacing: -0.02em;text-align: right; color:#00172B; margin-top:25px;}
-.sectionVisual .skills_wrap .txt p {font-weight: 500;font-size: 16px;line-height: 156%;letter-spacing: 0;text-align: right;color:#00172B; margin-top:6px;}
+.sectionVisual .skills_wrap .txt p {font-weight: 500;font-size: 16px;line-height: 156%;letter-spacing: 0;text-align: right;color:#00172B; margin-top:6px; word-break: keep-all;}
 .sectionVisual .skills_wrap .bgVideo {width:100%; height:280px; border-radius:8px; overflow:hidden; margin-top:26px;}
 .sectionVisual .skills_wrap .bgVideo .videoTab {width:100%; height:100%;object-fit: cover;}
 .sectionVisual .skills_wrap .bgVideo .videoImg {width:100%; height:100%;}
@@ -202,20 +214,20 @@ width:1100px; height:1068px; background:url(../images/Agent_Veto.png)no-repeat c
 .section02New .card_wrap {width:820px;}
 .section02New .card_wrap li {width:100%;border-top:2px solid #00172B4D;position:relative;}
 .section02New .card_wrap li:last-child {border-bottom:2px solid #00172B4D}
-.section02New .card_wrap li .color1 {background: linear-gradient(274.6deg, rgba(255, 192, 90, 0) 30%, rgba(255, 192, 90, 0.9) 100%);}
-.section02New .card_wrap li .color2 {background: linear-gradient(274.6deg, rgba(255, 80, 80, 0) 30%, rgba(255, 80, 80, 0.9) 100%);}
-.section02New .card_wrap li .color3 {background: linear-gradient(274.6deg, rgba(210, 164, 255, 0) 30%, rgba(181, 164, 255, 0.9) 100%);}
-.section02New .card_wrap li .color4 {background: linear-gradient(274.6deg, rgba(228, 226, 255, 0) 30%, rgba(228, 226, 255, 0.9) 100%);}
+.section02New .card_wrap li .color1 {background: linear-gradient(274.6deg, rgba(255, 192, 90, 0) 30%, rgba(255, 192, 90, 0.9) 100%);background: linear-gradient(275deg, rgba(211, 119, 245, 0.00) 30%, #D377F5 100%);}
+.section02New .card_wrap li .color2 {background: linear-gradient(274.6deg, rgba(255, 80, 80, 0) 30%, rgba(255, 80, 80, 0.9) 100%);background: linear-gradient(275deg, rgba(130, 153, 245, 0.00) 12.92%, #8299F5 100%);}
+.section02New .card_wrap li .color3 {background: linear-gradient(274.6deg, rgba(210, 164, 255, 0) 30%, rgba(181, 164, 255, 0.9) 100%);background: linear-gradient(275deg, rgba(70, 254, 134, 0.00) 30%, #46FE86 100%);}
+.section02New .card_wrap li .color4 {background: linear-gradient(274.6deg, rgba(228, 226, 255, 0) 30%, rgba(228, 226, 255, 0.9) 100%);background: linear-gradient(275deg, rgba(174, 235, 100, 0.00) 30%, #AEEB64 100%);}
 
 .section02New .card_wrap li a {display:block; width:100%; height:100%;}
 .section02New .card_wrap li .colorBox:after {content:''; display:block; width:100%; height:100%; position:absolute; top:0; left:0;}
-.section02New .card_wrap li .colorBox.hoverEffect:after {opacity: 1;transition: opacity 0.4s linear;}
-.section02New .card_wrap li .colorBox:hover:after {opacity: 1;transition: opacity 0.4s linear;}
+.section02New .card_wrap li .colorBox.hoverEffect:after {opacity: 1;transition: opacity 0.2s linear;}
+.section02New .card_wrap li .colorBox:hover:after {opacity: 1;transition: opacity 0.2s linear;}
 
-.section02New .card_wrap li .color1:after {background: linear-gradient(272.58deg, rgba(255, 192, 90, 0) 41.94%, rgba(255, 192, 90, 0.8) 98.44%),linear-gradient(0deg, rgba(255, 186, 58, 0.9), rgba(255, 186, 58, 0.9));transition: opacity 0.4s linear; opacity: 0;}
-.section02New .card_wrap li .color2:after {background: #FF5050E5;transition: opacity 0.4s linear; opacity: 0;}
-.section02New .card_wrap li .color3:after {background: #D2A4FFE5;transition: opacity 0.4s linear; opacity: 0;}
-.section02New .card_wrap li .color4:after {background: #E4E2FFE5;transition: opacity 0.4s linear; opacity: 0;}
+.section02New .card_wrap li .color1:after {background: linear-gradient(272.58deg, rgba(255, 192, 90, 0) 41.94%, rgba(255, 192, 90, 0.8) 98.44%),linear-gradient(0deg, rgba(255, 186, 58, 0.9), rgba(255, 186, 58, 0.9));background: #D377F5;transition: opacity 0.2s linear; opacity: 0;}
+.section02New .card_wrap li .color2:after {background: #FF5050E5;background: #8299F5;transition: opacity 0.2s linear; opacity: 0;}
+.section02New .card_wrap li .color3:after {background: #D2A4FFE5;background: #46FE86;transition: opacity 0.2s linear; opacity: 0;}
+.section02New .card_wrap li .color4:after {background: #E4E2FFE5;background: #AEEB64;transition: opacity 0.2s linear; opacity: 0;}
 
 .section02New .colorBox.hoverEffect .btn {box-shadow: 0px 0px 6px 0px #00172B;}
 .section02New .colorBox:hover .btn {box-shadow: 0px 0px 6px 0px #00172B;}
@@ -652,10 +664,10 @@ border: 1px solid rgba(255, 255, 255, 0.40);box-sizing: border-box; overflow: hi
 	.section02New .card_wrap li:last-child {border-bottom:1px solid #00172B4D}
 
 	.section02New .card_wrap li .colorBox {width:100%; height:100%;}
-	.section02New .card_wrap li .color1 {background: radial-gradient(100% 208.75% at 100% 0%, #FFC05A 0%, rgba(255, 192, 90, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;;}
-	.section02New .card_wrap li .color2 {background: radial-gradient(100% 208.75% at 100% 0%, #FF5050 0%, rgba(255, 80, 80, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;}
-	.section02New .card_wrap li .color3 {background: linear-gradient(50.06deg, rgba(181, 164, 255, 0) 27.34%, #B5A4FF 94.2%);}
-	.section02New .card_wrap li .color4 {background: linear-gradient(50.06deg, rgba(228, 226, 255, 0) 27.34%, rgba(228, 226, 255, 0.8) 94.2%);}
+	.section02New .card_wrap li .color1 {/* background: radial-gradient(100% 208.75% at 100% 0%, #FFC05A 0%, rgba(255, 192, 90, 0) 100%); */background: linear-gradient(50deg, rgba(211, 119, 245, 0.00) 27.34%, rgba(211, 119, 245, 0.80) 94.2%);background: linear-gradient(50deg, rgba(211, 119, 245, 0.00) 0%, rgba(211, 119, 245, 0.80) 100%);}
+	.section02New .card_wrap li .color2 {/* background: radial-gradient(100% 208.75% at 100% 0%, #FF5050 0%, rgba(255, 80, 80, 0) 100%); */background: radial-gradient(219.54% 141.42% at 100% 0%, #8299F5 0%, rgba(130, 153, 245, 0.00) 100%);}
+	.section02New .card_wrap li .color3 {/* background: linear-gradient(50.06deg, rgba(181, 164, 255, 0) 27.34%, #B5A4FF 94.2%); */background: radial-gradient(219.54% 141.42% at 100% 0%, #46FE86 0%, rgba(70, 254, 134, 0.00) 100%);}
+	.section02New .card_wrap li .color4 {/* background: linear-gradient(50.06deg, rgba(228, 226, 255, 0) 27.34%, rgba(228, 226, 255, 0.8) 94.2%); */background: linear-gradient(50deg, rgba(174, 235, 100, 0.00) 27.34%, #AEEB64 94.2%);background: linear-gradient(50deg, rgba(174, 235, 100, 0.00) 0%, #AEEB64 100%);}
 
 	.section02New .colorBox .flex-box {display:block; height:100%;}
 	.section02New .colorBox .img {width:62.22222vw; height:53.88888vw;width: 51.3889vw;height: 53.8889vw; position:absolute; top:0; right:0; text-align:right;}
